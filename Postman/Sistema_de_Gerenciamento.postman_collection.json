@@ -152,6 +152,67 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Sala",
+			"item": [
+				{
+					"name": "Sala.Listartodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/sala",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sala"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

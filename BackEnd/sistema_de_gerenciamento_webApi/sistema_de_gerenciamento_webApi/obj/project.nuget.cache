@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "108pjJGJ1JjueBFy6PaT1M6TfIkYOgUCs3MooSk1wrdRrvy7iq+Xt7IpC3ZaDC69NRDq19uDSlFxsItaqVOzKw==",
+  "dgSpecHash": "B0/lTYAhwYLnHuLzW/T5WBuGhHry12ig3Ep8j0rBcwNcLqNnm98vfcXRwRRqF+LZpxrY4EAIudHIIOGZIBf5dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
+  "projectFilePath": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcos Roberto\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Marcos Roberto\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.8\\microsoft.aspnetcore.authentication.jwtbearer.5.0.8.nupkg.sha512",

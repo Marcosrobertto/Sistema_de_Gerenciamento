@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj": {}
+    "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj": {
+    "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
         "projectName": "sistema_de_gerenciamento_webApi",
-        "projectPath": "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
+        "projectPath": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
         "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcos Roberto\\Desktop\\BackEnd da Escola\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\obj\\",
+        "outputPath": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
