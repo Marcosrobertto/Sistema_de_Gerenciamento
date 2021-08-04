@@ -33,7 +33,7 @@ namespace sistema_de_gerenciamento_webApi.Repositories
 
         public List<Usuario> ListarTodos()
         {
-            return ctx.Usuarios.ToList();
+            throw new NotImplementedException();
         }
 
         public Usuario BuscarPorNomeCpfSenha(string nome, string cpf, string senha)

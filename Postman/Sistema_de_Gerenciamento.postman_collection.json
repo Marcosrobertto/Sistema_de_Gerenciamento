@@ -113,7 +113,19 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:5000/api/tipoequipamento/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tipoequipamento",
+								"6"
+							]
+						}
 					},
 					"response": []
 				}
@@ -129,7 +141,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Nome\" : \"\",\r\n    \"Cpf\" : \"\",\r\n    \"Senha\" : \"\"\r\n}",
+							"raw": "{\r\n    \"Nome\" : \"Paulo\",\r\n    \"Cpf\" : \"413.842.290-00\",\r\n    \"Senha\" : \"paulo123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -181,7 +193,19 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:5000/api/sala/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sala",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -190,7 +214,27 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"andar\": \"4º Andar\",\r\n    \"nome\": \"Sala Test\",\r\n    \"metragem\": \"Metragem Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/sala",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sala"
+							]
+						}
 					},
 					"response": []
 				},
@@ -199,7 +243,28 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"andar\": \"4º Andar\",\r\n    \"nome\": \"Sala Test Atualizado\",\r\n    \"metragem\": \"Metragem Test Atualizado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/sala/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sala",
+								"4"
+							]
+						}
 					},
 					"response": []
 				},
@@ -209,6 +274,132 @@
 						"method": "DELETE",
 						"header": [],
 						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipamento",
+			"item": [
+				{
+					"name": "Equipamento.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/equipamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Equipamento.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/equipamento/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamento",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoEquipamento\": 4,\r\n    \"nomeEquipamento\": \"Equipamento Test\",\r\n    \"marca\": \"Marca Test\",\r\n    \"numeroSerie\": \"Numero de Serie Test\",\r\n    \"descricao\": \"Descrição Test\",\r\n    \"numeroPatrimonio\": \"Número de Patrimonio Test\",\r\n    \"situacao\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/equipamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoEquipamento\": 3,\r\n    \"nomeEquipamento\": \"Equipamento Test Atualizado\",\r\n    \"marca\": \"Marca Test Atualizada\",\r\n    \"numeroSerie\": \"Número de Série Test Atualizado\",\r\n    \"descricao\": \"Descrição Test Atualizado\",\r\n    \"numeroPatrimonio\": \"Número de Patrimonio Test Atualizado\",\r\n    \"situacao\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/equipamento/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamento",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sala.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/equipamento/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamento",
+								"7"
+							]
+						}
 					},
 					"response": []
 				}
