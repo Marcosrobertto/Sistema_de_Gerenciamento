@@ -79,7 +79,9 @@ namespace sistema_de_gerenciamento_webApi.Repositories
 
         public List<Equipamento> ListarTodos()
         {
-            return ctx.Equipamentos.ToList();
+            return ctx.Equipamentos
+                .Include(a => a.IdTipoEquipamentoNavigation)
+                .ToList();
         }
     }
 }

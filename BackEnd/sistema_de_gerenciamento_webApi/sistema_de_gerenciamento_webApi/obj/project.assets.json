@@ -7744,19 +7744,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marcos Roberto\\.nuget\\packages\\": {}
+    "C:\\Users\\48784309822\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
+      "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
       "projectName": "sistema_de_gerenciamento_webApi",
-      "projectPath": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
-      "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcos Roberto\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\obj\\",
+      "projectPath": "C:\\Users\\48784309822\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi.csproj",
+      "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\48784309822\\Desktop\\Sistema_de_Gerenciamento\\BackEnd\\sistema_de_gerenciamento_webApi\\sistema_de_gerenciamento_webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

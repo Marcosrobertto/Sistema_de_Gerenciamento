@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using sistema_de_gerenciamento_webApi.Domains;
 using sistema_de_gerenciamento_webApi.Interfaces;
@@ -23,6 +24,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             _tipoEquipamentoRepository = new TipoEquipamentoRepository();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult ListarTodos()
         {
@@ -36,6 +38,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{idTipoEquipamento}")]
         public IActionResult BuscarPorId(int idTipoEquipamento)
         {
@@ -49,6 +52,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Cadastrar(TipoEquipamento novoTipoEquipamento)
         {
@@ -64,7 +68,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPut("{idTipoEquipamento}")]
         public IActionResult Atualizar(int idTipoEquipamento, TipoEquipamento novoTipoEquipamento)
         {
@@ -80,6 +84,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{idTipoEquipamento}")]
         public IActionResult Deletar(int idTipoEquipamento)
         {

@@ -41,9 +41,9 @@ namespace sistema_de_gerenciamento_webApi.Repositories
             ctx.SaveChanges();
         }
 
-        public EquipamentoSala BuscarPorId(int idEquipamentoSala)
+        public EquipamentoSala BuscarPorId(int id)
         {
-            return ctx.EquipamentoSalas.Find(idEquipamentoSala);
+            return ctx.EquipamentoSalas.FirstOrDefault(c => c.IdEquipamento == id);
         }
 
         public void Cadastrar(EquipamentoSala novoEquipamentoSala)

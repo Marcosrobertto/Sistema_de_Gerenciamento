@@ -11,7 +11,7 @@ namespace sistema_de_gerenciamento_webApi.Interfaces
 
         List<EquipamentoSala> ListarTodos();
 
-        EquipamentoSala BuscarPorId(int idEquipamentoSala);
+        EquipamentoSala BuscarPorId(int id);
 
         void Cadastrar(EquipamentoSala novoEquipamentoSala);
 

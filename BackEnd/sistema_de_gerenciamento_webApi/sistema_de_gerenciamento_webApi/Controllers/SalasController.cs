@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using sistema_de_gerenciamento_webApi.Domains;
 using sistema_de_gerenciamento_webApi.Interfaces;
@@ -23,6 +24,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             _salaRepository = new SalaRepository();
         }
 
+        [Authorize]
         [HttpGet]
 
         public IActionResult ListarTodos()
@@ -37,6 +39,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{idSala}")]
         public IActionResult BuscarPorId(int idSala)
         {
@@ -50,6 +53,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Cadastrar(Sala novaSala)
         {
@@ -65,6 +69,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{idSala}")]
         public IActionResult Atualizar(int idSala, Sala novaSala)
         {
@@ -80,6 +85,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{idSala}")]
         public IActionResult Deletar(int idSala)
         {

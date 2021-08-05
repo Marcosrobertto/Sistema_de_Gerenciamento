@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using sistema_de_gerenciamento_webApi.Domains;
 using sistema_de_gerenciamento_webApi.Interfaces;
@@ -23,6 +24,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             _equipamentoSalaRepository = new EquipamentoSalaRepository();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult ListarTodos()
         {
@@ -36,12 +38,13 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{idEquipamento}")]
-        public IActionResult BuscarPorId(int idEquipamentoSala)
+        public IActionResult BuscarPorId(int idEquipamento)
         {
             try
             {
-                return Ok(_equipamentoSalaRepository.BuscarPorId(idEquipamentoSala));
+                return Ok(_equipamentoSalaRepository.BuscarPorId(idEquipamento));
             }
             catch (Exception erro)
             {
@@ -49,6 +52,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Cadastrar(EquipamentoSala novoEquipamentoSala)
         {
@@ -64,6 +68,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{idEquipamento}")]
         public IActionResult Atualizar(int idEquipamentoSala, EquipamentoSala equipamentoSalaAtualizado)
         {
@@ -79,6 +84,7 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{idAtendimento}")]
         public IActionResult Deletar(int idEquipamentoSala)
         {

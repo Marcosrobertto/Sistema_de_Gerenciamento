@@ -6,132 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "TiposEquipamento",
-			"item": [
-				{
-					"name": "TiposEquipamento.ListarTodos",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/tiposequipamento",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"tiposequipamento"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "TiposEquipamento.BuscarPorId",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/tiposequipamento/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"tiposequipamento",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "TiposEquipamento.Cadastrar",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"tipoEquipamento1\": \"Test Equipamento\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/api/tiposequipamento",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"tiposequipamento"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "TiposEquipamento.Atualizar",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"tipoEquipamento1\": \"Test Equipamento Atualizado\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/api/tiposequipamento/6",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"tiposequipamento",
-								"6"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "TiposEquipamento.Deletar",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5000/api/tiposequipamento/6",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"tiposequipamento",
-								"6"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Login",
 			"item": [
 				{
@@ -166,11 +40,197 @@
 			]
 		},
 		{
+			"name": "TiposEquipamento",
+			"item": [
+				{
+					"name": "TiposEquipamento.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposequipamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposEquipamento.BuscarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposequipamento/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipamento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposEquipamento.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoEquipamento1\": \"Test Equipamento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tiposequipamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposEquipamento.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoEquipamento1\": \"Test Equipamento Atualizado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tiposequipamento/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipamento",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposEquipamento.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposequipamento/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipamento",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Salas",
 			"item": [
 				{
 					"name": "Salas.Listartodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -191,6 +251,16 @@
 				{
 					"name": "Salas.BuscarPorId",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -212,6 +282,16 @@
 				{
 					"name": "Salas.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -241,11 +321,21 @@
 				{
 					"name": "Salas.Atualizar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"andar\": \"4º Andar\",\r\n    \"nome\": \"Sala Test Atualizado\",\r\n    \"metragem\": \"Metragem Test Atualizado\"\r\n}",
+							"raw": "{\r\n    \"andar\": \"1º\",\r\n    \"nome\": \"Sala De Informática\",\r\n    \"metragem\": \"15m²\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -253,7 +343,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/salas/4",
+							"raw": "http://localhost:5000/api/salas/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -262,7 +352,7 @@
 							"path": [
 								"api",
 								"salas",
-								"4"
+								"3"
 							]
 						}
 					},
@@ -271,6 +361,16 @@
 				{
 					"name": "Salas.Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -297,6 +397,16 @@
 				{
 					"name": "Equipamentos.ListarTodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -317,6 +427,16 @@
 				{
 					"name": "Equipamentos.BuscarPorId",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -338,6 +458,16 @@
 				{
 					"name": "Equipamentos.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -367,6 +497,16 @@
 				{
 					"name": "Equipamentos.Atualizar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -397,6 +537,16 @@
 				{
 					"name": "Equipamentos.Deletar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -423,6 +573,16 @@
 				{
 					"name": "EquipamentosSala.Listartodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -443,10 +603,20 @@
 				{
 					"name": "EquipamentosSala.BuscarPorid",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5MzY0NSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.oWyk7rGDvC-AYb1_fO1KJ4TgPtyJ4zSSr2XlKPsLImo",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/equipamentosSala/2",
+							"raw": "http://localhost:5000/api/equipamentosSala/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -455,7 +625,7 @@
 							"path": [
 								"api",
 								"equipamentosSala",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -464,9 +634,39 @@
 				{
 					"name": "EquipamentosSala.Casdastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjQxMy44NDIuMjkwLTAwIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyODE5NDQ5OSwiaXNzIjoic2lzdGVtYS53ZWJBcGkiLCJhdWQiOiJzaXN0ZW1hLndlYkFwaSJ9.CNfCtvf3ZF-R4r6tHl14pZOKE5iqPMZtJ4uIOiUKtPI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/equipamentosSala",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamentosSala"
+							]
+						}
 					},
 					"response": []
 				},
