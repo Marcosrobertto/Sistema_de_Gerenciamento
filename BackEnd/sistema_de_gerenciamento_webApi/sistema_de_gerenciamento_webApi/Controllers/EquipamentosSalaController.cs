@@ -13,22 +13,22 @@ namespace sistema_de_gerenciamento_webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class EquipamentoController : ControllerBase
+    public class EquipamentosSalaController : ControllerBase
     {
 
-        private IEquipamentoRepository _equipamentoRepository { get; set; }
+        private IEquipamentoSalaRepository _equipamentoSalaRepository { get; set; }
 
-        public EquipamentoController()
+        public EquipamentosSalaController()
         {
-            _equipamentoRepository = new EquipamentoRepository();
+            _equipamentoSalaRepository = new EquipamentoSalaRepository();
         }
 
         [HttpGet]
-        public IActionResult Listrtodos()
+        public IActionResult ListarTodos()
         {
             try
             {
-                return Ok(_equipamentoRepository.ListarTodos());
+                return Ok(_equipamentoSalaRepository.ListarTodos());
             }
             catch (Exception erro)
             {
@@ -37,11 +37,11 @@ namespace sistema_de_gerenciamento_webApi.Controllers
         }
 
         [HttpGet("{idEquipamento}")]
-        public IActionResult BuscarPorId(int idEquipamento)
+        public IActionResult BuscarPorId(int idEquipamentoSala)
         {
             try
             {
-                return Ok(_equipamentoRepository.BuscarPorId(idEquipamento));
+                return Ok(_equipamentoSalaRepository.BuscarPorId(idEquipamentoSala));
             }
             catch (Exception erro)
             {
@@ -50,11 +50,11 @@ namespace sistema_de_gerenciamento_webApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Equipamento novoEquipamento)
+        public IActionResult Cadastrar(EquipamentoSala novoEquipamentoSala)
         {
             try
             {
-                _equipamentoRepository.Cadastrar(novoEquipamento);
+                _equipamentoSalaRepository.Cadastrar(novoEquipamentoSala);
 
                 return StatusCode(201);
             }
@@ -65,11 +65,11 @@ namespace sistema_de_gerenciamento_webApi.Controllers
         }
 
         [HttpPut("{idEquipamento}")]
-        public IActionResult Atualizar(int idEquipamento, Equipamento equipamentoAtualizado)
+        public IActionResult Atualizar(int idEquipamentoSala, EquipamentoSala equipamentoSalaAtualizado)
         {
             try
             {
-                _equipamentoRepository.Atualizar(idEquipamento, equipamentoAtualizado);
+                _equipamentoSalaRepository.Atualizar(idEquipamentoSala, equipamentoSalaAtualizado);
 
                 return NoContent();
             }
@@ -79,12 +79,12 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
-        [HttpDelete("{idEquipamento}")]
-        public IActionResult Deletar(int idEquipamento)
+        [HttpDelete("{idAtendimento}")]
+        public IActionResult Deletar(int idEquipamentoSala)
         {
             try
             {
-                _equipamentoRepository.Deletar(idEquipamento);
+                _equipamentoSalaRepository.Deletar(idEquipamentoSala);
 
                 return StatusCode(204);
             }

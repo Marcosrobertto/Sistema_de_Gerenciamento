@@ -13,12 +13,12 @@ namespace sistema_de_gerenciamento_webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class SalaController : ControllerBase
+    public class SalasController : ControllerBase
     {
 
         private ISalaRepository _salaRepository { get; set; }
 
-        public SalaController()
+        public SalasController()
         {
             _salaRepository = new SalaRepository();
         }

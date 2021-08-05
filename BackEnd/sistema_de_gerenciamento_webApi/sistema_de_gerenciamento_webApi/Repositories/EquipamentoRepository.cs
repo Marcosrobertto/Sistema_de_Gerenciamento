@@ -1,4 +1,5 @@
-﻿using sistema_de_gerenciamento_webApi.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using sistema_de_gerenciamento_webApi.Contexts;
 using sistema_de_gerenciamento_webApi.Domains;
 using sistema_de_gerenciamento_webApi.Interfaces;
 using System;

@@ -6,15 +6,15 @@
 	},
 	"item": [
 		{
-			"name": "TipoEquipamento",
+			"name": "TiposEquipamento",
 			"item": [
 				{
-					"name": "TipoEquipamento.ListarTodos",
+					"name": "TiposEquipamento.ListarTodos",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/tipoequipamento",
+							"raw": "http://localhost:5000/api/tiposequipamento",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -22,19 +22,19 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"tipoequipamento"
+								"tiposequipamento"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "TipoEquipamento.BuscarPorId",
+					"name": "TiposEquipamento.BuscarPorId",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/tipoequipamento/2",
+							"raw": "http://localhost:5000/api/tiposequipamento/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -42,7 +42,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"tipoequipamento",
+								"tiposequipamento",
 								"2"
 							]
 						}
@@ -50,7 +50,7 @@
 					"response": []
 				},
 				{
-					"name": "TipoEquipamento.Cadastrar",
+					"name": "TiposEquipamento.Cadastrar",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -64,7 +64,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/tipoequipamento",
+							"raw": "http://localhost:5000/api/tiposequipamento",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -72,14 +72,14 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"tipoequipamento"
+								"tiposequipamento"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "TipoEquipamento.Atualizar",
+					"name": "TiposEquipamento.Atualizar",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -93,7 +93,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/tipoequipamento/6",
+							"raw": "http://localhost:5000/api/tiposequipamento/6",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -101,7 +101,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"tipoequipamento",
+								"tiposequipamento",
 								"6"
 							]
 						}
@@ -109,12 +109,12 @@
 					"response": []
 				},
 				{
-					"name": "TipoEquipamento.Deletar",
+					"name": "TiposEquipamento.Deletar",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/tipoequipamento/6",
+							"raw": "http://localhost:5000/api/tiposequipamento/6",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -122,7 +122,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"tipoequipamento",
+								"tiposequipamento",
 								"6"
 							]
 						}
@@ -166,15 +166,15 @@
 			]
 		},
 		{
-			"name": "Sala",
+			"name": "Salas",
 			"item": [
 				{
-					"name": "Sala.Listartodos",
+					"name": "Salas.Listartodos",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/sala",
+							"raw": "http://localhost:5000/api/salas",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -182,19 +182,19 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"sala"
+								"salas"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Sala.BuscarPorId",
+					"name": "Salas.BuscarPorId",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/sala/2",
+							"raw": "http://localhost:5000/api/salas/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -202,7 +202,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"sala",
+								"salas",
 								"2"
 							]
 						}
@@ -210,7 +210,7 @@
 					"response": []
 				},
 				{
-					"name": "Sala.Cadastrar",
+					"name": "Salas.Cadastrar",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -224,7 +224,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/sala",
+							"raw": "http://localhost:5000/api/salas",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -232,14 +232,14 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"sala"
+								"salas"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Sala.Atualizar",
+					"name": "Salas.Atualizar",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -253,7 +253,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/sala/4",
+							"raw": "http://localhost:5000/api/salas/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -261,7 +261,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"sala",
+								"salas",
 								"4"
 							]
 						}
@@ -269,26 +269,38 @@
 					"response": []
 				},
 				{
-					"name": "Sala.Deletar",
+					"name": "Salas.Deletar",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:5000/api/salas/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"salas",
+								"4"
+							]
+						}
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Equipamento",
+			"name": "Equipamentos",
 			"item": [
 				{
-					"name": "Equipamento.ListarTodos",
+					"name": "Equipamentos.ListarTodos",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/equipamento",
+							"raw": "http://localhost:5000/api/equipamentos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -296,19 +308,19 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"equipamento"
+								"equipamentos"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Equipamento.BuscarPorId",
+					"name": "Equipamentos.BuscarPorId",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/equipamento/3",
+							"raw": "http://localhost:5000/api/equipamentos/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -316,7 +328,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"equipamento",
+								"equipamentos",
 								"3"
 							]
 						}
@@ -324,7 +336,7 @@
 					"response": []
 				},
 				{
-					"name": "Sala.Cadastrar",
+					"name": "Equipamentos.Cadastrar",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -338,7 +350,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/equipamento",
+							"raw": "http://localhost:5000/api/equipamentos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -346,14 +358,14 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"equipamento"
+								"equipamentos"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Sala.Atualizar",
+					"name": "Equipamentos.Atualizar",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -367,7 +379,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/equipamento/7",
+							"raw": "http://localhost:5000/api/equipamentos/7",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -375,7 +387,7 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"equipamento",
+								"equipamentos",
 								"7"
 							]
 						}
@@ -383,12 +395,12 @@
 					"response": []
 				},
 				{
-					"name": "Sala.Deletar",
+					"name": "Equipamentos.Deletar",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/equipamento/7",
+							"raw": "http://localhost:5000/api/equipamentos/7",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -396,10 +408,83 @@
 							"port": "5000",
 							"path": [
 								"api",
-								"equipamento",
+								"equipamentos",
 								"7"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EquipamentosSala",
+			"item": [
+				{
+					"name": "EquipamentosSala.Listartodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/equipamentosSala",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamentosSala"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EquipamentosSala.BuscarPorid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/equipamentosSala/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"equipamentosSala",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EquipamentosSala.Casdastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "EquipamentosSala.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "EquipamentosSala.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
 					},
 					"response": []
 				}

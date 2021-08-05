@@ -13,22 +13,22 @@ namespace sistema_de_gerenciamento_webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoEquipamentoController : ControllerBase
+    public class EquipamentosController : ControllerBase
     {
 
-        private ITipoEquipamentoRepository _tipoEquipamentoRepository { get; set; }
+        private IEquipamentoRepository _equipamentoRepository { get; set; }
 
-        public TipoEquipamentoController()
+        public EquipamentosController()
         {
-            _tipoEquipamentoRepository = new TipoEquipamentoRepository();
+            _equipamentoRepository = new EquipamentoRepository();
         }
 
         [HttpGet]
-        public IActionResult ListarTodos()
+        public IActionResult Listrtodos()
         {
             try
             {
-                return Ok(_tipoEquipamentoRepository.ListarTodos());
+                return Ok(_equipamentoRepository.ListarTodos());
             }
             catch (Exception erro)
             {
@@ -36,12 +36,12 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
-        [HttpGet("{idTipoEquipamento}")]
-        public IActionResult BuscarPorId(int idTipoEquipamento)
+        [HttpGet("{idEquipamento}")]
+        public IActionResult BuscarPorId(int idEquipamento)
         {
             try
             {
-                return Ok(_tipoEquipamentoRepository.BuscarPorId(idTipoEquipamento));
+                return Ok(_equipamentoRepository.BuscarPorId(idEquipamento));
             }
             catch (Exception erro)
             {
@@ -50,11 +50,11 @@ namespace sistema_de_gerenciamento_webApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(TipoEquipamento novoTipoEquipamento)
+        public IActionResult Cadastrar(Equipamento novoEquipamento)
         {
             try
             {
-                _tipoEquipamentoRepository.Cadastrar(novoTipoEquipamento);
+                _equipamentoRepository.Cadastrar(novoEquipamento);
 
                 return StatusCode(201);
             }
@@ -64,13 +64,12 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
-
-        [HttpPut("{idTipoEquipamento}")]
-        public IActionResult Atualizar(int idTipoEquipamento, TipoEquipamento novoTipoEquipamento)
+        [HttpPut("{idEquipamento}")]
+        public IActionResult Atualizar(int idEquipamento, Equipamento equipamentoAtualizado)
         {
             try
             {
-                _tipoEquipamentoRepository.Atualizar(idTipoEquipamento, novoTipoEquipamento);
+                _equipamentoRepository.Atualizar(idEquipamento, equipamentoAtualizado);
 
                 return NoContent();
             }
@@ -80,12 +79,12 @@ namespace sistema_de_gerenciamento_webApi.Controllers
             }
         }
 
-        [HttpDelete("{idTipoEquipamento}")]
-        public IActionResult Deletar(int idTipoEquipamento)
+        [HttpDelete("{idEquipamento}")]
+        public IActionResult Deletar(int idEquipamento)
         {
             try
             {
-                _tipoEquipamentoRepository.Deletar(idTipoEquipamento);
+                _equipamentoRepository.Deletar(idEquipamento);
 
                 return StatusCode(204);
             }
