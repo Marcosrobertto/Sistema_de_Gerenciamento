@@ -15,7 +15,7 @@ const route = (
 
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component={Equipamentos}/>
+      <Route exact path='/' component={Login}/>
       <Route path='/Login' component={Login}/>
       <Route path='/Home' component={Home}/>
       <Route path='/Salas' component={Salas}/>

@@ -17,14 +17,20 @@ export default class BodyEquipamentos extends Component{
         this.state = {
 
             listaequips: [],
-            checkInative : false,
-            checkAtive : false,
+            status : 1,
+            nomeEqp : '',
+            marca : '',
+            tipoEquipamento : '',
+            serie : '',
+            patrimonio : '',
+            descricao : '',
 
         }
 
     }
+    
 
-    buscarEquipamentos = async () => {
+    BuscarEquipamentos = async () => {
 
         const response = await api.get('/equipamentos', {
 
@@ -46,24 +52,60 @@ export default class BodyEquipamentos extends Component{
 
     }
 
+    cadastrar = async () => {
+
+        const response = await api.post('/Equipamentos', {
+
+            headers:{
+
+                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
+
+            },
+
+            nomeEquipamento     :     this.state.nomeEqp,
+            marca               :     this.state.marca,
+            idTipoEquipametno   :     this.state.tipoEquiamento,
+            numeroPatrimonio    :     this.state.patrimonio,
+            numeroSerie         :     this.state.numeroSerie,
+            descrcao            :     this.state.descricao,
+            situacao            :     this.state.status,
+
+        } )
+
+        if(response.status === 201){
+
+            await this.BuscarEquipamentos()
+
+        }
+
+    }
+
     componentDidMount(){
 
-        this.buscarEquipamentos()
+        this.BuscarEquipamentos()
 
     }
 
-    CheckButtonInative = () => {
+    CheckStatusInative = () => {
 
-        this.setState({ checkInative : true });
-        this.setState({ checkAtive : false });
+        this.setState({ status : 1 });
         
     }
 
-    CheckButtonAtive = () => {
+    CheckStatusAtive = () => {
 
-        this.setState({ checkInative : false });
-        this.setState({ checkAtive : true });
+        this.setState({ checkAtive : 2 });
         
+    }
+    
+    AttState = (campo) => {
+
+        this.setState({
+
+            [campo.target.name] : [campo.target.value]
+
+        })
+
     }
 
     render(){
@@ -76,31 +118,31 @@ export default class BodyEquipamentos extends Component{
                     <Register>
                         <SubTittleEqp>Cadastre uma sala</SubTittleEqp>
                         <FormCadastro>
-                            <InputCadastrar placeholder='Nome do Equipamento'/>
-                            <InputCadastrar placeholder='Marca'/>
-                            <InputCadastrar placeholder='Tipo de Equipamento'/>
-                            <InputCadastrar placeholder='Nº de Serie'/>
-                            <InputCadastrar placeholder='Nº de Patrimônio'/>
-                            <InputCadastrar placeholder='Descrição'/>
+                            <InputCadastrar  name='nomeEqp'         onChange={this.AttState}      value={ this.state.nomeEqp }            placeholder='Nome do Equipamento'/>
+                            <InputCadastrar  name='marca'           onChange={this.AttState}      value={ this.state.marca }              placeholder='Marca'/>
+                            <InputCadastrar  name='tipoEquipamento' onChange={this.AttState}      value={ this.state.tipoEquipamento }    placeholder='Tipo de Equipamento'/>
+                            <InputCadastrar  name='serie'           onChange={this.AttState}      value={ this.state.serie }              placeholder='Nº de Serie'/>
+                            <InputCadastrar  name='patrimonio'      onChange={this.AttState}      value={ this.state.patrimonio }         placeholder='Nº de Patrimônio'/>
+                            <InputCadastrar  name='descricao'       onChange={this.AttState}      value={ this.state.descricao }          placeholder='Descrição'/>
                             <WrapperSelect>
                                 <Select>
                                     <InputSelect
                                         value={this.state.checkAtive}
                                         type='radio'
-                                        checked={ this.state.checkAtive === false ? false : true }
-                                        onClick={this.CheckButtonAtive}
-                                        onChange={this.CheckButtonAtive}
+                                        checked={ this.state.checkAtive === 2 ? true : false }
+                                        onClick={this.CheckStatusAtive}
+                                        onChange={this.CheckStatusAtive}
                                     />
                                     <Marker />
                                     <TextSelect> Ativo </TextSelect>
                                 </Select>
                                 <Select>
                                     <InputSelect 
-                                        value={this.state.checkInative}
+                                        value={this.state.status}
                                         type='radio'
-                                        checked={this.state.checkInative === false ? false : true }
-                                        onClick={this.CheckButtonInative}
-                                        onChange={this.CheckButtonInative}
+                                        checked={this.state.checkInative === 1 ? true : false }
+                                        onClick={this.CheckStatusInative}
+                                        onChange={this.CheckStatusInative}
                                     />
                                     <Marker />
                                     <TextSelect> Inativo </TextSelect>

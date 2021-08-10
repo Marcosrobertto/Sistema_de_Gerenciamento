@@ -47,10 +47,53 @@ export default class BodySalas extends Component {
 
             await this.setState({ listaSalas : response.data })
 
-            console.log(response.data);
-            console.log(this.state.listaSalas);
+            // console.log(response.data);
+            // console.log(this.state.listaSalas);
 
         }
+    }
+
+    cadastrar = async () => {
+
+        const response = await api.post('/Equipamentos', { 
+
+            nome       :     this.state.nome,
+            andar      :     this.state.andar,
+            metragem   :     this.state.metragem,
+
+        } )
+
+        if(response.status === 201){
+
+            await this.BuscarSalas()
+
+        }
+
+    }
+
+    DeletarItem = async (id) => {
+
+        const idItem = id;
+
+        const response = await api.delete('/salas/'+idItem, {
+
+            headers:{
+
+                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
+
+            }
+
+        })
+
+
+        // if(response === 200){
+
+        await this.BuscarSalas()
+        
+        console.log('apagado')
+        
+        // }
+
     }
     
     componentDidMount(){
@@ -85,7 +128,7 @@ export default class BodySalas extends Component {
                                 this.state.listaSalas.map( sala => {
 
                                     return (
-                                        <ItemList key={sala.idsala}>
+                                        <ItemList key={sala.idSala}>
                                             <FrameAndar>
                                                 <TextItem>{sala.andar}</TextItem>
                                             </FrameAndar>
@@ -96,7 +139,7 @@ export default class BodySalas extends Component {
                                                 </Data>
                                                 <Icons>
                                                     <IconUpdate/>
-                                                    <IconDelete/>
+                                                    <IconDelete onClick={ () => { this.DeletarItem(sala.idSala) } }/>
                                                 </Icons>
                                             </FrameContentItems>
                                         </ItemList>
