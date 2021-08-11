@@ -43,7 +43,7 @@ export default function Login() {
     <Container>
       <Logo src={logo} />
       <DivLogin>
-        <Tittle>Senai</Tittle>
+        <Tittle>Login</Tittle>
         <FormLogin onSubmit={handleSubmit(Auth)}>
           <InputIANES type='text' {...register('cpf')} placeholder='CPF' />
           <InputIANES type='text' {...register('nome')} placeholder='Nome' />

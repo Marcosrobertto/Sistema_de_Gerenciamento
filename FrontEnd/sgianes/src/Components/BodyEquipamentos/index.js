@@ -52,16 +52,12 @@ export default class BodyEquipamentos extends Component{
 
     }
 
-    cadastrar = async () => {
+    Cadastrar = async (event) => {
 
-        const response = await api.post('/Equipamentos', {
+        await event.preventDefault();
 
-            headers:{
-
-                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
-
-            },
-
+        const response = await api.post('/Equipamentos', await {
+            
             nomeEquipamento     :     this.state.nomeEqp,
             marca               :     this.state.marca,
             idTipoEquipametno   :     this.state.tipoEquiamento,
@@ -69,14 +65,20 @@ export default class BodyEquipamentos extends Component{
             numeroSerie         :     this.state.numeroSerie,
             descrcao            :     this.state.descricao,
             situacao            :     this.state.status,
+        },
+            {   
+                headers:{
+    
+                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
+    
+                }
+            }
 
-        } )
+        )
 
-        if(response.status === 201){
+        console.log('tem que ter cadastrado')
 
-            await this.BuscarEquipamentos()
-
-        }
+        // await this.BuscarEquipamentos()
 
     }
 
@@ -117,7 +119,7 @@ export default class BodyEquipamentos extends Component{
                 <WrapperBody>
                     <Register>
                         <SubTittleEqp>Cadastre uma sala</SubTittleEqp>
-                        <FormCadastro>
+                        <FormCadastro onSubmit={this.Cadastrar}>
                             <InputCadastrar  name='nomeEqp'         onChange={this.AttState}      value={ this.state.nomeEqp }            placeholder='Nome do Equipamento'/>
                             <InputCadastrar  name='marca'           onChange={this.AttState}      value={ this.state.marca }              placeholder='Marca'/>
                             <InputCadastrar  name='tipoEquipamento' onChange={this.AttState}      value={ this.state.tipoEquipamento }    placeholder='Tipo de Equipamento'/>

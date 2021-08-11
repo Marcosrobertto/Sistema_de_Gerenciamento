@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import BodySalas from '../../Components/BodySalas'
+import BodySalas from '../../Components/BodySalas/index'
 
 import Footer from '../../Components/Footer'
 

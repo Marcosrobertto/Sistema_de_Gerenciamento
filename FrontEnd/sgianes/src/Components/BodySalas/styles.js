@@ -33,7 +33,7 @@ export const SubTittle3 = styled.h3`
   margin: 3rem 0;
 `;
 
-export const FormCadastro = styled.div`
+export const FormCadastro = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@ export const InputCadastrar = styled.input`
   }
 `;
 
-export const ButtonCadastrar = styled.button`
+export const ButtonCadastrar = styled.input`
   background-color: #E64D50;
   width: 15rem;
   height: 2rem;
@@ -108,6 +108,10 @@ export const ItemList = styled.div`
   margin: 1rem auto;
   border-radius: 10px;
   overflow:auto;
+  color: #444444;
+  :hover{
+    color: #006699;
+  }
 `;
 
 export const FrameAndar = styled.div`
@@ -115,15 +119,16 @@ export const FrameAndar = styled.div`
   flex-direction: column;
   width: 6rem;
   margin: 0.5rem;
-  border: #006699 solid 3px;
+  border: solid 3px;
   border-radius: 20px;
   justify-content: space-around;
   align-items: center;
 `;
 
 export const TextItem = styled.div`
-  color: #006699;
+  /* color: #006699; */
   font-size: 1.2rem;
+  cursor: default;
 `;
 
 export const TextSala = styled(TextItem)`
@@ -156,6 +161,7 @@ export const IconUpdate = styled(Pencil)`
   width: 1.6rem;
   margin: auto;
   cursor: pointer;
+  color: #555555;
   :hover{
     color: grey;
   }
@@ -165,7 +171,8 @@ export const IconDelete = styled(Trash)`
   width: 1.6rem;
   margin: auto;
   cursor: pointer;
+  color: #555555;
   :hover{
-    color: red;
+    color: darkred;
   }
 `;

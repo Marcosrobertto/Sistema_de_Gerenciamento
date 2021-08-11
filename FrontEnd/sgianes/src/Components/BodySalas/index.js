@@ -1,131 +1,129 @@
-import React, {Component} from 'react'
+import { useEffect, useState } from "react"
+
 
 import {Container, WrapperBody, Register, InputCadastrar, ButtonCadastrar, SubTittle3, FormCadastro, ListSalas, SubTittleLista, FrameList, ItemList, FrameAndar, TextItem, TextSala, TextMetro, FrameContentItems, Data, Icons, IconUpdate, IconDelete } from './styles'
-import {Logo} from '../../Components/BodyLogin/styles'
+import {Logo} from '../BodyLogin/styles'
 
 import logo from '../../Imgs/logo.png'
 
 import api from '../../Services/api'
 
-export default class BodySalas extends Component {
+import { useForm } from "react-hook-form"
 
-    constructor(props){
-        super(props);
-        this.state = {
 
-            listaSalas : [],
-            andar : '',
-            nome : '',
-            metragem : '',
+function BodySalas() {
 
-        }   
-    }
+    const [listaSalas, setListaSalas] = useState([])
 
-    AttState = (campo) => {
+    const { register, handleSubmit } = useForm()
 
-        this.setState({
+    async function BuscarSalas() {
+        
+        const response = await api.get('/salas', {
 
-            [campo.target.name] : [campo.target.value]
-
-        })
-
-    }
-
-    BuscarSalas = async () => {
-
-        const response = await api.get('/Salas', {
-
-            headers:{
-
-                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
-
-            }
-
-        });
-
-        if(response.status === 200){
-
-            await this.setState({ listaSalas : response.data })
-
-            // console.log(response.data);
-            // console.log(this.state.listaSalas);
-
-        }
-    }
-
-    cadastrar = async () => {
-
-        const response = await api.post('/Equipamentos', { 
-
-            nome       :     this.state.nome,
-            andar      :     this.state.andar,
-            metragem   :     this.state.metragem,
-
-        } )
-
-        if(response.status === 201){
-
-            await this.BuscarSalas()
-
-        }
-
-    }
-
-    DeletarItem = async (id) => {
-
-        const idItem = id;
-
-        const response = await api.delete('/salas/'+idItem, {
-
-            headers:{
+            headers : {
 
                 'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
 
             }
 
         })
-
-
-        // if(response === 200){
-
-        await this.BuscarSalas()
-        
-        console.log('apagado')
-        
-        // }
+            
+        if( response.status === 200 ) {
+            
+            console.log('resposta ok')
+            
+            setListaSalas(response.data)
+            
+            console.log(listaSalas)
+            
+        }
 
     }
+
+    async function CadastrarSala(data) {
+
+        const nome = data.nome
+        const andar = data.andar
+        const metragem = data.metragem
+
+        console.log(nome, andar, metragem)
+        
+        const response = await api.post('/salas', {
+                        
+            nome       :     nome,
+            andar      :     andar,
+            metragem   :     metragem,
+        },
+            
+        {   
+            headers:{
+
+            'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
+
+            }
+        })
+
+        if( response.status === 201 ){
+
+            console.log('api bom')
+
+            await BuscarSalas();
+
+        }
+
+    }
+
+    async function ApagarSala(id){
+
+        const iddelete = id
+
+        const response = await api.delete('/salas/' + iddelete, {
+
+            headers : {
+
+                'Authorization' : 'Bearer ' + localStorage.getItem('tokenuserup')
+
+            }
+
+        })
+
+        if(response.status === 204){
+
+            await BuscarSalas()
+
+        }
+
+    }
+
+    useEffect( () => {
+
+        BuscarSalas();
+
+    }, []);
     
-    componentDidMount(){
-        
-        this.BuscarSalas();
-        
-    }
+    return(
 
-    render(){
-
-        return(
-
-            <Container>
+        <Container>
                 <Logo src={logo}/>
                 <WrapperBody>
 
                     <Register>
                         <SubTittle3>Cadastre uma sala</SubTittle3>
-                        <FormCadastro onSubmit = {this.CadastrarSala}>
-                            <InputCadastrar name='andar' onChange={this.AttState} placeholder='Nº Andar da Sala'/>
-                            <InputCadastrar name='nome' onChange={this.AttState} placeholder='Nome'/>
-                            <InputCadastrar name='metragem' onChange={this.AttState} placeholder='Metragem (m²)'/>
-                            <ButtonCadastrar type='submit'>Cadastrar</ButtonCadastrar>
+                        <FormCadastro onSubmit={handleSubmit(CadastrarSala)}>
+                            <InputCadastrar {...register('andar')}      placeholder='Nº Andar (ex: 1º Andar)'/>
+                            <InputCadastrar {...register('nome')}       placeholder='Nome (ex: Sala de Redes)'/>
+                            <InputCadastrar {...register('metragem')}   placeholder='Metragem (ex: 16 m²)'/>
+                            <ButtonCadastrar type='submit' value='Cadastrar'/>
                         </FormCadastro>
                     </Register>
 
-                    <ListSalas>
+                    <ListSalas> 
                         <SubTittleLista>Salas</SubTittleLista>
                         <FrameList>
                             {
 
-                                this.state.listaSalas.map( sala => {
+                                listaSalas.map( sala => {
 
                                     return (
                                         <ItemList key={sala.idSala}>
@@ -139,7 +137,7 @@ export default class BodySalas extends Component {
                                                 </Data>
                                                 <Icons>
                                                     <IconUpdate/>
-                                                    <IconDelete onClick={ () => { this.DeletarItem(sala.idSala) } }/>
+                                                    <IconDelete onClick={ () => {ApagarSala(sala.idSala)} }/>
                                                 </Icons>
                                             </FrameContentItems>
                                         </ItemList>
@@ -156,8 +154,10 @@ export default class BodySalas extends Component {
                 </WrapperBody>
             </Container>
 
-        )
 
-    }
+
+    )
 
 }
+
+export default BodySalas;
